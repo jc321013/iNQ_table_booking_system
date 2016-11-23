@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image mapster</title>
+    <script language="JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script language="JavaScript" src="jquery.imagemapster.js"></script>
+</head>
+<body>
+<img src="images/LAYOUT.png" alt="floor layout" usemap="#floormap">
+
+<map name="floormap">
+    <area shape="rect" coords="227,340,259,362" alt="table" id="t1-s1" onclick="clicktable(this.id)">
+    <area shape="rect" coords="261,342,293,362" alt="table" id="t1-s2" onclick="clicktable(this.id)">
+    <area shape="rect" coords="227,366,259,385" alt="table" id="t1-s3" onclick="clicktable(this.id)">
+    <area shape="rect" coords="261,366,295,386" alt="table" id="t1-s4" onclick="clicktable(this.id)">
+</map>
+
+<script language="JavaScript">
+    $(document).ready(function () {
+        $('#f')
+    })
+</script>
+</body>
+</html>

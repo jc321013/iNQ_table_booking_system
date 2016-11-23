@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Map</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="jquery.imagemapster.js"></script>
 </head>
 <body>
 <!--<img src="LAYOUT.png" alt="floor layout" id="layout">-->
-<img src="LAYOUT.png" alt="floor layout" usemap="#floormap">
+<img src="images/LAYOUT.png" usemap="#image-map" id="img">
 
-<map name="floormap">
-    <area shape="rect" coords="226,340,260,364" alt="table" id="t1-s1" onclick="clicktable()">
+<map name="image-map">
+    <area target="" alt="" title="" href="" color="green" coords="223,340,259,364" shape="rect">
+    <area target="" alt="" title="" href="" color="green" coords="227,366,259,390" shape="rect">
+    <area target="" alt="" title="" href="" color="green" coords="260,342,295,363" shape="rect">
+    <area target="" alt="" title="" href="" color="green" coords="259,364,293,387" shape="rect">
 </map>
 
-<script src="workspace.js"></script>
+<script>
+    $(document).ready(function ()
+    {
+        $('img').mapster({
+            singleSelect : true,
+            mapKey: 'color',
+            fill : true, altImage : 'images/Layout_green.png',
+            fillOpacity : 1,
+        });
+    });
+</script>
+
 </body>
 </html>
